@@ -48,7 +48,7 @@
             button2.Name = "button2";
             button2.Size = new Size(126, 40);
             button2.TabIndex = 1;
-            button2.Text = "Вставить данные";
+            button2.Text = "Добавить новый контакт";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 

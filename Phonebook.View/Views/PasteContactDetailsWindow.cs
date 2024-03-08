@@ -58,8 +58,23 @@ namespace Phonebook.View.Views
 
             };
             await _addContactService.AddContactAsync(contactDTO);
+           
+            ClearTextBoxes(this);
+        }
+        private void ClearTextBoxes(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = "";
+                }
+                if (c.Controls.Count > 0)
+                {
+                    ClearTextBoxes(c);
+                }
+            }
         }
 
-       
     }
 }
